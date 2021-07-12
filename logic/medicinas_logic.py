@@ -1,6 +1,5 @@
 from core.pyba_logic import PybaLogic
 
-
 class MedicinasLogic(PybaLogic):
     def __init__(self):
         super().__init__()
