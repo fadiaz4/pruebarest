@@ -1,6 +1,4 @@
 Flask
-PyMySQL
 flask-restful
-requests
-Flask-Cors
+PyMySQL
 gunicorn

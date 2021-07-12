@@ -22,36 +22,15 @@ class PybaDatabase:
         self.connection = self.createConnection()
         self.cursor = self.createCursor()
 
-    def get_host(self):
-        return self.__host
-
-    def get_port(self):
-        return self.__port
-
-    def get_user(self):
-        return self.__user
-
-    def __get_password(self):
-        return self.__passwd
-
-    def get_database(self):
-        return self.__database
-
-    def __get_connection(self):
-        return self.__connection
-
-    def __get_cursor(self):
-        return self.__cursor
-
-    def __createConnection(self):
+    def createConnection(self):
         con = pymysql.connect(
-        host=self.get_host(),
-        port=self.get_port(),
-        user=self.get_user(),
-        passwd=self.__get_password(),
-        database=self.get_database(),
-        charset="utf8mb4",
-        cursorclass=pymysql.cursors.DictCursor,
+            host=self.host,
+            port=self.port,
+            user=self.user,
+            passwd=self.password,
+            database=self.database,
+            charset="utf8mb4",
+            cursorclass=pymysql.cursors.DictCursor,
         )
         return con
 
