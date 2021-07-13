@@ -1,5 +1,7 @@
 from flask import Flask
 from flask_restful import Api
+from resources.empresa_resource import Empresa
+from resources.empresas_resource import Empresas
 from resources.medicina_resource import Medicina
 from resources.medicinas_resource import Medicinas
 from resources.hospital_resource import Hospital
@@ -8,6 +10,10 @@ from resources.hospitales_resource import Hospitales
 
 app = Flask(__name__)
 api = Api(app)
+
+api.add_resource(Empresa,"/empresas/<int:idempresas>")
+
+api.add_resource(Empresas, "/empresas")
 
 api.add_resource(Medicina,"/medicinas/<int:idmedicinas>")
 

@@ -12,7 +12,7 @@ class Medicina(Resource):
         args.add_argument("nombremed", type=str, help="nombre de la medicina")
         args.add_argument("preciosmed", type=str, help="precio de la medicina")
         args.add_argument("casa farmaceutica", type=str, help="casa farmaceutica de la medicina")
-        args.add_argument("principio activo", type=int, help="principio activo de la medicina")
+        args.add_argument("principio activo", type=str, help="principio activo de la medicina")
         return args
 
     def get(self, idmedicinas):

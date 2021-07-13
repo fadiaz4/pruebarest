@@ -12,8 +12,8 @@ class Hospital(Resource):
         args.add_argument("nombrehosp", type=str, help="Nombre del Hospital")
         args.add_argument("municipiohosp", type=str, help="Municipio donde se encuentra el Hospital")
         args.add_argument("direccionhosp", type=str, help="Dirección exacta del Hospital")
-        args.add_argument("telefonohosp", type=int, help="Telefono del Hospital")
-        args.add_argument("especialidadeshosp", type=int, help="Especialidades que ofrece el Hospital")
+        args.add_argument("telefonohosp", type=str, help="Telefono del Hospital")
+        args.add_argument("especialidadeshosp", type=str, help="Especialidades que ofrece el Hospital")
         return args
 
     def get(self, idhospital):
